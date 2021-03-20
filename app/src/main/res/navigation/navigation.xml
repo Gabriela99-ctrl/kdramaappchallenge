@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainKdramaFragment3">
+    <fragment
+        android:id="@+id/mainKdramaFragment3"
+        android:name="edu.itesm.kdramasappchallenge.MainKdramaFragment"
+        android:label="fragment_main_kdrama"
+        tools:layout="@layout/fragment_main_kdrama" >
+        <action
+            android:id="@+id/action_mainKdramaFragment3_to_kdramasFragment"
+            app:destination="@id/kdramasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kdramasFragment"
+        android:name="edu.itesm.kdramasappchallenge.KdramasFragment"
+        android:label="fragment_kdramas"
+        tools:layout="@layout/fragment_kdramas" >
+        <action
+            android:id="@+id/action_kdramasFragment_to_kdramaFragment"
+            app:destination="@id/kdramaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kdramaFragment"
+        android:name="edu.itesm.kdramasappchallenge.KdramaFragment"
+        android:label="fragment_kdrama"
+        tools:layout="@layout/fragment_kdrama" >
+        <argument
+            android:name="kdrama"
+            app:argType="edu.itesm.kdramasappchallenge.Kdrama" />
+    </fragment>
+</navigation>
